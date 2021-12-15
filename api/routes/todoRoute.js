@@ -74,7 +74,7 @@ router.patch('/:id', async (req,res) => {
     })
   } catch (error) {
     res.status(400).json({
-      message: 'todo was not able to update'
+      message: 'todo was not able to updated'
     })
   }
 
