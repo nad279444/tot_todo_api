@@ -25,7 +25,7 @@ app.use(express.json());
 app.use('/todos', router);
 
 app.get('/',(req,res) => {
-     res.send('welcome to nodejs tutorial');
+     res.send('welcome to express tutorial');
  })
     
 
