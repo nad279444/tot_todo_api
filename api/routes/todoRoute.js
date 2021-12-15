@@ -6,9 +6,6 @@ import Todo from '../model/todoModel.js';
 const router = express.Router();
 
 
-// router.get('/',(req,res) => {
-//     res.send('welcome to nodejs tutorial');
-// })
 
 //create a todo
 

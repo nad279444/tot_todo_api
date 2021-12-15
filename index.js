@@ -24,7 +24,10 @@ app.use(cors());
 app.use(express.json());
 app.use('/todos', router);
 
-
+app.get('/',(req,res) => {
+     res.send('welcome to nodejs tutorial');
+ })
+    
 
 app.listen(port, () => {
     console.log (`listening at port ${port}`);
