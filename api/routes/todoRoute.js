@@ -60,11 +60,11 @@ router.get('/', async (req,res) => {
 //update a to todo
 router.patch('/:id', async (req,res) => {
 
-  const {title,description,date_time} = req.body;
+  const body = req.body;
   const {id} = req.params;
 
   try {
-    const  todos = await Todo.updateOne({_id:id},{$set:{title,description,date_time}})
+    const  todos = await Todo.updateOne({_id:id},{$set:{_body:body}})
     res.status(200).json({
       message: 'todo was updated',
       data: todos
