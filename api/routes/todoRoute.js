@@ -41,25 +41,21 @@ router.post('/todo', async(req,res) => {
    
 })
 //get all todos
+router.get('/', async (req,res) => {
 
-router.get('/',(req,res) => {
-  res.send('this is a list of todos')
+  try {
+    const  todos = await Todo.find();
+    res.status(200).json({
+      message: 'request was successful',
+      data: todos
+    })
+  } catch (error) {
+    res.status(500).json({
+      message: 'Server error'
+    })
+  }
+
 })
-// router.get('/', async (req,res) => {
-
-//   try {
-//     const  todos = await Todo.find();
-//     res.status(200).json({
-//       message: 'request was successful',
-//       data: todos
-//     })
-//   } catch (error) {
-//     res.status(500).json({
-//       message: 'Server error'
-//     })
-//   }
-
-// })
 
 //update a to todo
 router.patch('/:id', async (req,res) => {
