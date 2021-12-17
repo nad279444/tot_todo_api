@@ -45,10 +45,11 @@ router.get('/', async (req,res) => {
 
   try {
     const  todos = await Todo.find();
-    res.status(200).json({
-      message: 'request was successful',
-      data: todos
-    })
+    res.send(todos);
+    // res.status(200).json({
+    //   message: 'request was successful',
+    //   data: todos
+    // })
   } catch (error) {
     res.status(500).json({
       message: 'Server error'
