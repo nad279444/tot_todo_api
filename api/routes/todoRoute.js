@@ -45,7 +45,7 @@ router.get('/', async (req,res) => {
 
   try {
     const  todos = await Todo.find();
-    res.send(todos);
+    res.send('this is a  list of todos');
     // res.status(200).json({
     //   message: 'request was successful',
     //   data: todos
