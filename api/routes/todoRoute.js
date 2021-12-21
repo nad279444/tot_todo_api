@@ -44,7 +44,7 @@ router.post('/todo', async(req,res) => {
 router.get('/', async (req,res) => {
 
   try {
-    const  todos = await Todo.find();
+    const  todos = await Todo.find({});
     res.status(200).json({
       message: 'request was successful',
       data: todos
