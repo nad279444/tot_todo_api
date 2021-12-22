@@ -13,7 +13,7 @@ const app = express();
 const db = process.env.DB_URL;
 
 
-mongoose.connect("db",
+mongoose.connect(db,
 {useNewUrlParser:true,useUnifiedTopology:true})
 .then(() => {console.log('database is connected live')})
 
