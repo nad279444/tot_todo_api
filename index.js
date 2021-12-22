@@ -24,7 +24,7 @@ app.use(cors());
 app.use(express.json());
 app.use('/todos', router);
 
-app.get('/todos',(req,res) => {
+app.get('/',(req,res) => {
      res.send('Welcome back Express');
  })
     
