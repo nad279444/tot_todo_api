@@ -22,7 +22,7 @@ const port = process.env.P0RT || 3000;
 
 app.use(cors());
 app.use(express.json());
-app.use('/', router);
+app.use('/todos', router);
 
 // app.get('/',(req,res) => {
 //      res.send('Welcome back Express');
