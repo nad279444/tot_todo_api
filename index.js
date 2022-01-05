@@ -20,8 +20,9 @@ mongoose.connect(db,
 const port = process.env.P0RT || 3000;
 
 
-app.use(cors());
+
 app.use(express.json());
+app.use(cors());
 app.use('/todos', router);
 
 // app.get('/',(req,res) => {
