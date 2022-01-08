@@ -27,23 +27,6 @@ router.get("/",async (req,res) => {
 
 })
 
-// router.route("/todos")
-// .get( async (req, res) => {
-     
-//   const todos = await Todo.find({});
-//   if(todos) {
-//    return res.status(200).json({
-//        status: true,
-//       message: "request was successful",
-//       data: todos,
-//     });
-//   } else {
-//    return res.status(400).json({
-//        status: false,
-//       message: "Server error",
-//     });
-//   }
-// });
 
 
 //create a todo

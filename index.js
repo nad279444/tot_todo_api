@@ -14,7 +14,7 @@ const app = express();
 //middlewares
 app.use(express.json());
 app.use(cors()); 
-app.use("/", todos); 
+app.use("/todos", todos); 
 
 
 const db = process.env.DB_URL;
