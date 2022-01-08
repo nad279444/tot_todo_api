@@ -25,9 +25,9 @@ app.use(express.json());
 app.use(cors());
 app.use("/", todos);
 
-// app.get('/',(req,res) => {
-//      res.send('Welcome back Express');
-//  })
+app.get('/',(req,res) => {
+     res.send('Welcome back Express');
+ })
     
 
 app.listen(port, () => {
