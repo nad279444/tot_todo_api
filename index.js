@@ -1,5 +1,5 @@
 import express from 'express';
-import router from './api/routes/todoRoute.js';
+import todos from './api/routes/todoRoute.js';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
@@ -23,7 +23,7 @@ const port = process.env.P0RT || 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use('/todos', router);
+app.use("/", todos);
 
 // app.get('/',(req,res) => {
 //      res.send('Welcome back Express');

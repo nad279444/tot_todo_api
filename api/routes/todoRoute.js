@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 //get all todos
-router.get('/', async (req,res) => {
+router.get("/", async (req,res) => {
 
   try {
     const  todos = await Todo.find({});
@@ -28,7 +28,7 @@ router.get('/', async (req,res) => {
 
 //create a todo
 
-router.post('/todo', async(req,res) => {
+router.post("/todo", async(req,res) => {
 
   
    const {title,description,date_time} = req.body;
@@ -62,7 +62,7 @@ router.post('/todo', async(req,res) => {
 
 
 //update a to todo
-router.patch('/:id', async (req,res) => {
+router.patch("/:id", async (req,res) => {
 
   const body = req.body;
   const {id} = req.params;
@@ -82,7 +82,7 @@ router.patch('/:id', async (req,res) => {
 })
 
 //delete a todo
-router.delete('/:id', async (req,res) => {
+router.delete("/:id", async (req,res) => {
   const {id} = req.params;
 
   try {
