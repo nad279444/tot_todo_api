@@ -11,39 +11,39 @@ const app = express();
 // })
 
 //get all todos
-// router.route("/todos").get(async (req,res) => {
+router.get("/",async (req,res) => {
 
-//   try {
-//     const  todos = await Todo.find({});
-//     res.status(200).json({
-//       message: 'request was successful',
-//       data: todos
-//     })
-//   } catch (error) {
-//     res.status(500).json({
-//       message: 'Server error'
-//     })
-//   }
-
-// })
-
-router.route("/todos")
-.get( async (req, res) => {
-     
-  const todos = await Todo.find({});
-  if(todos) {
-   return res.status(200).json({
-       status: true,
-      message: "request was successful",
-      data: todos,
-    });
-  } else {
-   return res.status(400).json({
-       status: false,
-      message: "Server error",
-    });
+  try {
+    const  todos = await Todo.find({});
+    res.status(200).json({
+      message: 'request was successful',
+      data: todos
+    })
+  } catch (error) {
+    res.status(500).json({
+      message: 'Server error'
+    })
   }
-});
+
+})
+
+// router.route("/todos")
+// .get( async (req, res) => {
+     
+//   const todos = await Todo.find({});
+//   if(todos) {
+//    return res.status(200).json({
+//        status: true,
+//       message: "request was successful",
+//       data: todos,
+//     });
+//   } else {
+//    return res.status(400).json({
+//        status: false,
+//       message: "Server error",
+//     });
+//   }
+// });
 
 
 //create a todo
