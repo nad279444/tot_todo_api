@@ -6,9 +6,9 @@ import Todo from '../model/todoModel.js';
 const router = express.Router();
 const app = express();
 
-router.get('/',(req,res) => {
-  res.send('Welcome back Ben');
-})
+// router.get('/',(req,res) => {
+//   res.send('Welcome back Ben');
+// })
 
 //get all todos
 // router.route("/todos").get(async (req,res) => {
@@ -26,6 +26,24 @@ router.get('/',(req,res) => {
 //   }
 
 // })
+
+router.route("/todos")
+.get( async (req, res) => {
+     
+  const todos = await Todo.find({});
+  if(todos) {
+   return res.status(200).json({
+       status: true,
+      message: "request was successful",
+      data: todos,
+    });
+  } else {
+   return res.status(400).json({
+       status: false,
+      message: "Server error",
+    });
+  }
+});
 
 
 //create a todo
