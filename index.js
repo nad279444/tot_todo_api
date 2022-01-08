@@ -9,8 +9,16 @@ dotenv.config();
 
 
 
-const app = express();      
+const app = express();
+
+//middlewares
+app.use(express.json());
+app.use(cors()); 
+app.use("/", todos); 
+
+
 const db = process.env.DB_URL;
+
 
 
 mongoose.connect(db,
@@ -21,9 +29,8 @@ const port = process.env.P0RT || 3000;
 
 
 
-app.use(express.json());
-app.use(cors());
-app.use("/", todos);
+
+
 
 
     
