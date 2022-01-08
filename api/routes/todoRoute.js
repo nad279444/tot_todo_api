@@ -9,7 +9,7 @@ const router = express.Router();
 
 
 //get all todos
-router.get("/", async (req,res) => {
+router.get("/todos", async (req,res) => {
 
   try {
     const  todos = await Todo.find({});
