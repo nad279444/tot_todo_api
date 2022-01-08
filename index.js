@@ -23,7 +23,7 @@ const port = process.env.P0RT || 3000;
 
 app.use(express.json());
 app.use(cors());
-app.use("/", todos);
+app.use("/todos", todos);
 
 
     
