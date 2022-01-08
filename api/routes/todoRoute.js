@@ -6,24 +6,26 @@ import Todo from '../model/todoModel.js';
 const router = express.Router();
 const app = express();
 
-
+app.get('/todos',(req,res) => {
+  res.send('Welcome back Express');
+})
 
 //get all todos
-router.route("/todos").get(async (req,res) => {
+// router.route("/todos").get(async (req,res) => {
 
-  try {
-    const  todos = await Todo.find({});
-    res.status(200).json({
-      message: 'request was successful',
-      data: todos
-    })
-  } catch (error) {
-    res.status(500).json({
-      message: 'Server error'
-    })
-  }
+//   try {
+//     const  todos = await Todo.find({});
+//     res.status(200).json({
+//       message: 'request was successful',
+//       data: todos
+//     })
+//   } catch (error) {
+//     res.status(500).json({
+//       message: 'Server error'
+//     })
+//   }
 
-})
+// })
 
 
 //create a todo
