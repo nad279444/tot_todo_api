@@ -6,7 +6,7 @@ import Todo from '../model/todoModel.js';
 const router = express.Router();
 const app = express();
 
-app.get('/todos',(req,res) => {
+app.get('/',(req,res) => {
   res.send('Welcome back Express');
 })
 
