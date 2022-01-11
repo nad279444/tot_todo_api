@@ -34,13 +34,13 @@ router.get("/",async (req,res) => {
 router.post("/todo", async(req,res) => {
 
   
-   const {title,description,date_time} = req.body;
+   const {title,description,dateTime} = req.body;
 
    try {
     const todoModel = await Todo.create({
       title,
       description,
-      date_time
+      dateTime
    })
    
      res.status(200).json({
