@@ -11,7 +11,7 @@ const todoSchema = Schema({
         type: String,
         required: true
     },
-    date_time : {
+    dateTime : {
         type: String,
         required: true
     },
